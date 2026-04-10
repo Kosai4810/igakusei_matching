@@ -29,6 +29,20 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
 | test@test.com | password123 | student（受験生） |
 | tutor@test.ac.jp | password123 | tutor（講師） |
 
+### 講師テストユーザー詳細
+
+- **ユーザーID**: 5f1eb582-3dfb-4f7b-92d1-21b58be7685b
+- **ニックネーム**: テスト講師
+- **大学**: 東京大学
+- **学年**: 医学部3年
+- **対応科目**: 数学、英語、物理
+- **対応形式**: オンライン、対面
+- **認証状態**: 学番メール認証済み、学生証確認済み
+
+### 受験生テストユーザー詳細
+
+- **ユーザーID**: 31b80028-322d-4114-84e8-e7ed09cb2dd9
+
 ## Vercel デプロイ設定
 
 環境変数を Vercel の Project Settings > Environment Variables に追加:
