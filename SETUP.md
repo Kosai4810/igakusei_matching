@@ -1,5 +1,10 @@
 # セットアップ情報
 
+## 本番URL
+
+- **Vercel**: https://igakuseimatching.vercel.app
+- **Vercel Dashboard**: https://vercel.com/kosai4810s-projects/igakusei_matching
+
 ## Supabase プロジェクト
 
 - **プロジェクト名**: igakusei-matching
@@ -33,8 +38,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
 ## Supabase 追加設定
 
 ### Authentication
-- Site URL: デプロイ後のVercel URL を設定
-- Redirect URLs: `https://your-domain.vercel.app/**` を追加
+- Site URL: https://igakuseimatching.vercel.app
+- Redirect URLs: `https://igakuseimatching.vercel.app/**` を追加
 
 ### Storage
 - `request-attachments` バケットを作成（Public）
