@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 医学生マッチング
 
-## Getting Started
+医学部受験生と現役医学生をつなぐマッチングプラットフォームのMVPです。
 
-First, run the development server:
+## 機能
+
+### 受験生向け
+- 依頼投稿（科目指導、過去問添削、面接対策、相談など）
+- 講師からの提案を受け取り、選択
+- マッチング後のメッセージ機能
+- 講師へのレビュー投稿
+
+### 医学生講師向け
+- 学番メール（.ac.jp）による認証
+- プロフィール作成（対応科目、時間帯など）
+- 依頼への提案
+- マッチング後のメッセージ機能
+
+## 技術スタック
+
+- **フロントエンド**: Next.js 14 (App Router), TypeScript, Tailwind CSS
+- **UIコンポーネント**: shadcn/ui
+- **バックエンド/DB**: Supabase (Auth, PostgreSQL, Storage)
+- **フォーム**: React Hook Form + Zod
+- **デプロイ**: Vercel
+
+## セットアップ
+
+### 1. 依存関係のインストール
+
+```bash
+npm install
+```
+
+### 2. 環境変数の設定
+
+`.env.local`ファイルを作成し、以下を設定：
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+### 3. Supabaseのセットアップ
+
+1. [Supabase](https://supabase.com)でプロジェクトを作成
+2. `supabase/migrations/001_initial_schema.sql`の内容をSQL Editorで実行
+3. Authentication > URL Configurationでサイトのurlを設定
+4. Storageで`request-attachments`バケットを作成（公開設定）
+
+### 4. 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000 でアクセス可能です。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ディレクトリ構造
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── (auth)/          # 認証関連ページ
+│   │   ├── login/
+│   │   ├── register/
+│   │   └── auth/callback/
+│   ├── student/         # 受験生向けページ
+│   │   ├── dashboard/
+│   │   ├── profile/
+│   │   ├── requests/
+│   │   └── matches/
+│   ├── tutor/           # 講師向けページ
+│   │   ├── dashboard/
+│   │   ├── profile/
+│   │   ├── requests/
+│   │   └── matches/
+│   └── page.tsx         # トップページ
+├── components/
+│   ├── layout/          # レイアウトコンポーネント
+│   └── ui/              # shadcn/uiコンポーネント
+├── hooks/               # カスタムフック
+└── lib/
+    ├── supabase/        # Supabaseクライアント
+    ├── validations/     # Zodスキーマ
+    └── constants.ts     # 定数定義
+```
 
-## Learn More
+## データベース構造
 
-To learn more about Next.js, take a look at the following resources:
+- `users` - ユーザー基本情報（role: student/tutor）
+- `student_profiles` - 受験生プロフィール
+- `tutor_profiles` - 講師プロフィール
+- `tutor_verifications` - 講師認証状況
+- `requests` - 依頼
+- `request_attachments` - 依頼添付ファイル
+- `proposals` - 提案
+- `matches` - マッチング
+- `messages` - メッセージ
+- `reviews` - レビュー
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## デプロイ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel
 
-## Deploy on Vercel
+1. GitHubリポジトリをVercelに接続
+2. 環境変数を設定
+3. デプロイ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Supabase本番設定
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Authentication > URL Configurationで本番URLを追加
+2. RLSポリシーが正しく設定されていることを確認
+
+## ライセンス
+
+MIT
