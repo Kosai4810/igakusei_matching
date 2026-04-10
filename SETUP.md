@@ -26,7 +26,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
 
 | メール | パスワード | ロール |
 |--------|-----------|--------|
-| test@test.com | password123 | student |
+| test@test.com | password123 | student（受験生） |
+| tutor@test.ac.jp | password123 | tutor（講師） |
 
 ## Vercel デプロイ設定
 
