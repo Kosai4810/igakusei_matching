@@ -92,11 +92,15 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="card-hover border-0 shadow-soft bg-white">
+            <Card className="card-hover border-0 shadow-soft bg-white overflow-hidden">
+              <div className="h-40 overflow-hidden">
+                <img
+                  src="/happy-family.png"
+                  alt="あらゆる受験に対応"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <CardHeader className="pb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-secondary/30 flex items-center justify-center mb-4">
-                  <span className="text-3xl">🎯</span>
-                </div>
                 <CardTitle className="text-xl">あらゆる受験に対応</CardTitle>
               </CardHeader>
               <CardContent>
