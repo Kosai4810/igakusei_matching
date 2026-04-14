@@ -19,7 +19,7 @@ export default function HomePage() {
           <Badge className="mb-6 px-4 py-1.5 text-sm bg-white/80 backdrop-blur border-primary/20 text-primary font-medium">
             医学生限定の講師陣
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight font-serif">
             医学生に、受験の
             <br />
             <span className="text-gradient">&quot;今必要なことだけ&quot;</span>
