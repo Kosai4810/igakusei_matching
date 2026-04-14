@@ -41,7 +41,7 @@ export default function ForTutorsPage() {
               <CardContent className="pt-6">
                 <h3 className="font-semibold mb-2">経験を活かせる</h3>
                 <p className="text-gray-600">
-                  医学部受験を乗り越えた経験は貴重です。
+                  難関大受験を乗り越えた経験は貴重です。
                   次の世代の受験生を応援しましょう。
                 </p>
               </CardContent>

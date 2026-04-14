@@ -20,7 +20,7 @@ export default function HomePage() {
             医学生限定の講師陣
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight">
-            医学生に、医学部受験の
+            医学生に、受験の
             <br />
             <span className="text-gradient">&quot;今必要なことだけ&quot;</span>
             <br />
@@ -29,7 +29,7 @@ export default function HomePage() {
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
             授業・添削・相談を、必要なときに必要な分だけ。
             <br className="hidden sm:block" />
-            医学部に合格した医学生講師が、あなたの受験をサポートします。
+            難関大に合格した医学生講師が、あなたの受験をサポートします。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/register/student">
@@ -54,7 +54,7 @@ export default function HomePage() {
               このサービスの特徴
             </h2>
             <p className="text-muted-foreground text-lg">
-              医学部受験に特化した、新しい学習サポートの形
+              受験に特化した、新しい学習サポートの形
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -68,7 +68,7 @@ export default function HomePage() {
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
                   講師は全員、大学の学番メールで認証された医学生のみ。
-                  医学部受験を経験した先輩だからこそできるアドバイスがあります。
+                  難関大受験を経験した先輩だからこそできるアドバイスがあります。
                 </p>
               </CardContent>
             </Card>
@@ -93,12 +93,12 @@ export default function HomePage() {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-secondary/30 flex items-center justify-center mb-4">
                   <span className="text-3xl">🎯</span>
                 </div>
-                <CardTitle className="text-xl">医学部受験に特化</CardTitle>
+                <CardTitle className="text-xl">あらゆる受験に対応</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
                   一般入試だけでなく、面接・推薦・小論文にも対応。
-                  医学部受験特有の悩みを相談できる環境があります。
+                  受験の悩みを気軽に相談できる環境があります。
                 </p>
               </CardContent>
             </Card>
@@ -283,7 +283,7 @@ export default function HomePage() {
             {[
               { q: '登録料はかかりますか？', a: '登録は無料です。依頼の際に講師と合意した金額のみが発生します。' },
               { q: '講師は本当に医学生ですか？', a: '講師登録には大学の学番メール（.ac.jp）が必須です。さらに学生証を提出した講師には「学生証確認済み」バッジが表示されます。' },
-              { q: 'どのような科目に対応していますか？', a: '英語・数学・化学・生物・物理・小論文・面接・学習計画・推薦対策など、医学部受験に必要な科目・対策に幅広く対応しています。' },
+              { q: 'どのような科目に対応していますか？', a: '英語・数学・化学・生物・物理・小論文・面接・学習計画・推薦対策など、受験に必要な科目・対策に幅広く対応しています。' },
             ].map((faq, i) => (
               <Card key={i} className="border-0 shadow-soft bg-white">
                 <CardHeader className="pb-2">
@@ -317,7 +317,7 @@ export default function HomePage() {
             今すぐ始めましょう
           </h2>
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            医学部合格に向けて、医学生講師のサポートを受けてみませんか？
+            志望校合格に向けて、医学生講師のサポートを受けてみませんか？
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/register/student">
@@ -339,7 +339,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-2xl font-bold text-white">
-              医学生マッチング
+              スキマ医学生
             </div>
             <div className="flex gap-8 text-sm">
               <Link href="/for-students" className="hover:text-white transition-colors">
@@ -354,7 +354,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-white/10 mt-10 pt-10 text-center text-sm">
-            © 2024 医学生マッチング. All rights reserved.
+            © 2024 スキマ医学生. All rights reserved.
           </div>
         </div>
       </footer>

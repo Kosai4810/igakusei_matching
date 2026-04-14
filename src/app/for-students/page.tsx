@@ -14,7 +14,7 @@ export default function ForStudentsPage() {
             受験生の方へ
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            医学部合格を目指すあなたを、医学生講師がサポートします
+            志望校合格を目指すあなたを、医学生講師がサポートします
           </p>
           <Link href="/register/student">
             <Button size="lg" className="text-lg px-8">
@@ -45,7 +45,7 @@ export default function ForStudentsPage() {
             <Card>
               <CardContent className="pt-6">
                 <p className="text-gray-600">
-                  ・面接対策を医学部に合格した人にアドバイスしてもらいたい
+                  ・面接対策を難関大に合格した人にアドバイスしてもらいたい
                 </p>
               </CardContent>
             </Card>
