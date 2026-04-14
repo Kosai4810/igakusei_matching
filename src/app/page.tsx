@@ -30,7 +30,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/register/student">
               <Button size="lg" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl shadow-soft glow-pulse">
-                生徒として登録
+                生徒/保護者として登録
               </Button>
             </Link>
             <Link href="/register/tutor">
@@ -318,7 +318,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/register/student">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto text-base px-8 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                生徒として登録
+                生徒/保護者として登録
               </Button>
             </Link>
             <Link href="/register/tutor">
