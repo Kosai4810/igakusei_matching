@@ -27,17 +27,24 @@ export default function HomePage() {
             <br className="hidden sm:block" />
             難関大に合格した医学生講師が、あなたの受験をサポートします。
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/register/student">
-              <Button size="lg" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl shadow-soft glow-pulse">
-                生徒/保護者として登録
+          <div className="flex flex-col items-center gap-4">
+            <Link href="/login">
+              <Button size="lg" variant="ghost" className="text-lg underline underline-offset-4 hover:no-underline">
+                ログインする
               </Button>
             </Link>
-            <Link href="/register/tutor">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl bg-white/50 backdrop-blur hover:bg-white/80">
-                講師として登録
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link href="/register/student">
+                <Button size="lg" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl shadow-soft glow-pulse">
+                  生徒/保護者として登録
+                </Button>
+              </Link>
+              <Link href="/register/tutor">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl bg-white/50 backdrop-blur hover:bg-white/80">
+                  講師として登録
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
