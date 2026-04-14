@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 
 export default function HomePage() {
   return (
@@ -16,9 +15,6 @@ export default function HomePage() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
 
         <div className="container relative mx-auto max-w-4xl text-center">
-          <Badge className="mb-6 px-4 py-1.5 text-sm bg-white/80 backdrop-blur border-primary/20 text-primary font-medium">
-            医学生限定の講師陣
-          </Badge>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight font-serif">
             医学生に、受験の
             <br />
@@ -31,14 +27,14 @@ export default function HomePage() {
             <br className="hidden sm:block" />
             難関大に合格した医学生講師が、あなたの受験をサポートします。
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/register/student">
-              <Button size="lg" className="w-full sm:w-auto text-base px-8 py-6 rounded-2xl shadow-soft glow-pulse">
-                受験生として始める
+              <Button size="lg" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl shadow-soft glow-pulse">
+                生徒として登録
               </Button>
             </Link>
             <Link href="/register/tutor">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base px-8 py-6 rounded-2xl bg-white/50 backdrop-blur hover:bg-white/80">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl bg-white/50 backdrop-blur hover:bg-white/80">
                 講師として登録
               </Button>
             </Link>
@@ -322,7 +318,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/register/student">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto text-base px-8 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                受験生として登録
+                生徒として登録
               </Button>
             </Link>
             <Link href="/register/tutor">
