@@ -54,11 +54,15 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="card-hover border-0 shadow-soft bg-white">
+            <Card className="card-hover border-0 shadow-soft bg-white overflow-hidden">
+              <div className="h-40 overflow-hidden">
+                <img
+                  src="/medical-students.png"
+                  alt="医学生講師"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <CardHeader className="pb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-4">
-                  <span className="text-3xl">👨‍⚕️</span>
-                </div>
                 <CardTitle className="text-xl">医学生限定の講師</CardTitle>
               </CardHeader>
               <CardContent>
