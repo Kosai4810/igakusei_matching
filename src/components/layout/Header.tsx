@@ -19,13 +19,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-white/80 backdrop-blur-lg">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center group">
+        <Link href="/" className="flex items-center group h-full py-2">
           <Image
             src="/logo.png"
             alt="スキマ医学生"
-            width={180}
-            height={40}
-            className="h-9 w-auto"
+            width={240}
+            height={48}
+            className="h-12 w-auto"
             priority
           />
         </Link>
