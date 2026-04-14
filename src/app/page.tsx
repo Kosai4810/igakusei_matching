@@ -73,11 +73,15 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="card-hover border-0 shadow-soft bg-white">
+            <Card className="card-hover border-0 shadow-soft bg-white overflow-hidden">
+              <div className="h-40 overflow-hidden">
+                <img
+                  src="/study-notes.png"
+                  alt="単発で依頼"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <CardHeader className="pb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/40 to-accent/10 flex items-center justify-center mb-4">
-                  <span className="text-3xl">📝</span>
-                </div>
                 <CardTitle className="text-xl">単発で依頼できる</CardTitle>
               </CardHeader>
               <CardContent>
