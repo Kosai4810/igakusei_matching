@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Header } from '@/components/layout/Header'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -16,9 +17,9 @@ export default function HomePage() {
 
         <div className="container relative mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight font-serif">
-            医学生に、受験の
+            医学生に、
             <br />
-            <span className="text-gradient">&quot;今必要なことだけ&quot;</span>
+            <span className="text-gradient">&quot;今必要なことだけ&quot;</span>を
             <br />
             単発で頼める
           </h1>
@@ -35,15 +36,26 @@ export default function HomePage() {
             </Link>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/register/student">
-                <Button size="lg" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl shadow-soft glow-pulse">
+                <Button size="lg" className="w-full sm:w-64 text-xl py-8 rounded-2xl">
                   生徒/保護者として登録
                 </Button>
               </Link>
               <Link href="/register/tutor">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-xl px-12 py-8 rounded-2xl bg-white/50 backdrop-blur hover:bg-white/80">
+                <Button size="lg" variant="outline" className="w-full sm:w-64 text-xl py-8 rounded-2xl bg-[#1e4077] text-white border-[#1e4077] hover:bg-[#163059] hover:border-[#163059]">
                   講師として登録
                 </Button>
               </Link>
+            </div>
+            <div className="mt-4">
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition-colors">
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <div className="text-left">
+                  <div className="text-xs opacity-80">App Storeから</div>
+                  <div className="text-lg font-semibold -mt-1">ダウンロード</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -53,11 +65,17 @@ export default function HomePage() {
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              このサービスの特徴
-            </h2>
+            <div className="flex justify-center mb-4">
+              <Image
+                src="/logo.png"
+                alt="スキマ医学生"
+                width={320}
+                height={64}
+                className="h-16 w-auto"
+              />
+            </div>
             <p className="text-muted-foreground text-lg">
-              受験に特化した、新しい学習サポートの形
+              医学生講師陣の指導を、必要な時に、好きなだけ。
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -70,7 +88,7 @@ export default function HomePage() {
                 />
               </div>
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl">医学生限定の講師</CardTitle>
+                <CardTitle className="text-xl text-center">医学生限定の講師</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
@@ -89,7 +107,7 @@ export default function HomePage() {
                 />
               </div>
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl">単発で依頼できる</CardTitle>
+                <CardTitle className="text-xl text-center">単発で依頼できる</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
@@ -108,7 +126,7 @@ export default function HomePage() {
                 />
               </div>
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl">あらゆる受験に対応</CardTitle>
+                <CardTitle className="text-xl text-center">あらゆる受験に対応</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
@@ -126,7 +144,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              受験生の利用の流れ
+              生徒/保護者様のご利用の流れ
             </h2>
             <p className="text-muted-foreground text-lg">
               4つのステップで簡単に始められます
@@ -135,7 +153,7 @@ export default function HomePage() {
           <div className="space-y-6">
             {[
               { num: 1, title: '無料で登録', desc: 'メールアドレスとパスワードで簡単登録。登録料は無料です。' },
-              { num: 2, title: '依頼を作成', desc: '「授業・添削・相談」から形式を選び、依頼内容を投稿します。' },
+              { num: 2, title: '依頼を作成', desc: '「授業・添削・相談」から形式を選び、依頼内容を投稿します。その際に、依頼の金額を自分で設定することができます。' },
               { num: 3, title: '提案を受ける', desc: '複数の講師から提案が届きます。プロフィールや評価を参考に選びましょう。' },
               { num: 4, title: '講師とやり取り', desc: 'マッチ成立後、講師とメッセージでやり取りして指導を受けます。' },
             ].map((step) => (
